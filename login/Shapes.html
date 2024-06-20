@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            background-color: rgb(140, 234, 239);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .box {
+            height: 90vh;
+            width: 90vw;
+            background-color: rgb(140, 234, 239);
+            border: 5px solid white;
+            border-radius: 25px;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .box>h1 {
+            padding: 10px 40px 20px 10px;
+            color: white;
+        }
+
+        .small-box {
+            height: 89vh;
+            width: 60vw;
+            background-color: white;
+            border-radius: 15px;
+            position: relative;
+            z-index: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .small-box>img {
+            position: absolute;
+            height: 60vh;
+            left: -15vw;
+        }
+
+        h1 {
+            font-size: 1.9rem;
+            font-family: sans-serif;
+            font-weight: bold;
+
+        }
+
+        .btn {
+            margin-bottom: 40px;
+            display: inline;
+        }
+
+        .btn-sign {
+            height: 40px;
+            margin-top: 20px;
+            margin-right: 15px;
+            margin-bottom: 20px;
+            width: 200px;
+            background-color: white;
+            border: 1px solid gray;
+            display: inline-flex;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .container p {
+            color: grey;
+            margin-bottom: 40px;
+            margin-top: 20px;
+            text-align: center;
+            font-size: 1.2rem;
+        }
+
+
+        .create-account {
+            width: 420px;
+            height: 40px;
+            background-color: rgb(44, 178, 151);
+            color: white;
+            font-weight: bold;
+            font-family: sans-serif;
+            font-size: 1rem;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+
+        .small-box a {
+            color: rgb(44, 178, 151);
+            text-decoration: none;
+        }
+
+        .input {
+            width: 420px;
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            border-bottom: 2px solid grey;
+            margin-bottom: 40px;
+            padding-bottom: 10px;
+            padding-top: 10px;
+            font-size: 1rem;
+
+        }
+
+        .input:focus {
+            outline: none;
+        }
+
+        .account {
+            margin-top: 10px;
+        }
+
+        @media (max-width: 700px) {
+
+            .small-box {
+                width: 90vw;
+            }
+
+            .small-box>img {
+                display: none;
+            }
+
+            .box>h1 {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <h1>Connect to World Wide Web.</h1>
+        <div class="small-box">
+            <img src="https://lh3.googleusercontent.com/vdKbcWCGwxtvvoZG5LK-rQcix_6mXl7Z2zzVil3ggiZ6hUETgtSVdbw0hrNAbRoCTCuSt_yn4EJrBS5XzILlYBxGIhMuikJ9nVt1HVA5nI76zA5ludsdTQF9t-ANf4lZPV7Wli9JzTrA8fj1wa5YAgcza7EK1Y8uqcj92Hjm1jaJJ10OJAkdaQg6oB7lKQ"
+                alt="World Wide Web Logo">
+            <div class="container">
+                <h1>Create Account</h1>
+
+                <div class="btn">
+                    <button class="btn-sign">
+                        <img src="./svg/7123025_logo_google_g_icon.svg" alt="Google logo" height="40">
+                        <a href="https://www.google.co.in/" style="color: black;">Sign in with Google</a>
+                    </button>
+                    <button class="btn-sign">
+                        <img src="./svg/icons8-facebook-48.png" alt="Facebook logo" height="40">
+                        <a href="https://www.facebook.com/" style="color: black;">Sign in with Facebook</a>
+                    </button>
+                </div>
+
+
+                <p class="divider">- OR -</p>
+
+                <input class="input" type="text" placeholder="Full Name" required><br>
+                <input class="input" type="email" placeholder="Email Address" required><br>
+                <input class="input" type="password" placeholder="Password" required><br>
+
+                <button class="create-account" type="submit">Create Account</button>
+                <p class="account">Already have an account? <a href="#">Login</a></p>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>
